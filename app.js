@@ -9,6 +9,7 @@ mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?re
 { useNewUrlParser: true } );
 var scheduledjobs = require('./Service/scheduledjobs');
 var indexRouter = require('./routes/index');
+var actuator = require('./routes/actuator');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/actuator', actuator);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
