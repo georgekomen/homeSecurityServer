@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var africastalking = require('../Service/africastalking');
 var blink = require('../blink');
 
-router.post('/door', function(req, res, next) {
+router.post('/blink', function(req, res, next) {
     blink.blinkGpio(null, null);
     // req.query.name
 });
