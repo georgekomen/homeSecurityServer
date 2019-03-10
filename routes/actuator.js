@@ -5,8 +5,7 @@ var africastalking = require('../Service/africastalking');
 var blink = require('../blink');
 
 router.post('/blink', function(req, res, next) {
-
-    res.status(200).json({"value": blink.blinkGpio(null, null)});
+    blink.blinkGpio(req, res);
     // req.query.name
 });
 
