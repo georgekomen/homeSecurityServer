@@ -16,6 +16,7 @@ exports.blinkGpio = function(arg1, arg2) {
     clearInterval(blinkInterval); // Stop blink intervals
     LED.writeSync(0); // Turn LED off
     LED.unexport(); // Unexport GPIO to free resources
+    return "blinked";
   }
 
   setTimeout(endBlink, 5000); //stop blinking after 5 seconds
