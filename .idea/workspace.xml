@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blink.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="153">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -124,7 +124,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552331326789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552331479735" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../rpi-nodejs-examples" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -194,19 +194,19 @@
       <workItem from="1552240743067" duration="45000" />
       <workItem from="1552247043741" duration="2528000" />
       <workItem from="1552284092971" duration="1394000" />
-      <workItem from="1552328979030" duration="2275000" />
+      <workItem from="1552328979030" duration="2559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7370000" />
+    <option name="totallyTimeSpent" value="7654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" weight="0.24958123" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15936556" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15936556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -225,7 +225,7 @@
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32847896" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32847896" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49093655" visible="true" weight="0.41930115" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49093655" visible="true" weight="0.41930115" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32686085" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32847896" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32847896" />
@@ -311,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -10,7 +10,7 @@ exports.blinkGpio = function(req, res) {
         throw err;
       }
 
-      led.write(value ^ 1, err => { // Asynchronous write
+      LED.write(value ^ 1, err => { // Asynchronous write
         if (err) {
           throw err;
         }
