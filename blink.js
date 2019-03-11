@@ -21,7 +21,7 @@ exports.blinkGpio = function(req, res) {
   function endBlink() { //function to stop blinking
     clearInterval(blinkInterval); // Stop blink intervals
     LED.write(0, err => {}); // Turn LED off
-    LED.unexport(); // Unexport GPIO to free resources
+    // LED.unexport(); // Unexport GPIO to free resources
     res.status(200).json({"value": "blinked"});
   }
 
