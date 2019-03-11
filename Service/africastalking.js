@@ -52,4 +52,4 @@ exports.sendMessage = function(to, message) {
     // Add post parameters to the http request
     post_req.write(post_data);
     post_req.end();
-}
+};
