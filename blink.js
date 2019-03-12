@@ -18,7 +18,7 @@ exports.blinkGpio = (req, res) => {
     // LED.unexport(); // Unexport GPIO to free resources
   };
 
-  let blinkInterval = setInterval(blinkLED, 250); //run the blinkLED function every 250ms
+  const blinkInterval = setInterval(blinkLED, 250); //run the blinkLED function every 250ms
 
   setTimeout(endBlink, 5000); //stop blinking after 5 seconds
 };
