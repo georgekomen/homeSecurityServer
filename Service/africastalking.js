@@ -5,7 +5,7 @@ const https       = require('https');
 const username = 'georgekomen';
 const apikey   = 'e36225a6e5630d73cfd37d66cdbf042a171161d5415d811e43ed96321f9cb556';
 
-exports.sendMessage = function(to, message) {
+exports.sendMessage = (to, message) => {
     // Build the post string from an object
     const post_data = querystring.stringify({
         'username' : username,
@@ -31,14 +31,14 @@ exports.sendMessage = function(to, message) {
         }
     };
     
-    const post_req = https.request(post_options, function(res) {
+    const post_req = https.request(post_options, (res) => {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
-            var jsObject   = JSON.parse(chunk);
-            var recipients = jsObject.SMSMessageData.Recipients;
+            const jsObject   = JSON.parse(chunk);
+            const recipients = jsObject.SMSMessageData.Recipients;
             if ( recipients.length > 0 ) {
-                for (var i = 0; i < recipients.length; ++i ) {
-                    var logStr  = 'number=' + recipients[i].number;
+                for (let i = 0; i < recipients.length; ++i ) {
+                    let logStr  = 'number=' + recipients[i].number;
                     logStr     += ';cost='   + recipients[i].cost;
                     logStr     += ';status=' + recipients[i].status; // status is either "Success" or "error message"
                     logStr     += ';statusCode=' + recipients[i].statusCode;
@@ -49,6 +49,7 @@ exports.sendMessage = function(to, message) {
             }
         });
     });
+
     // Add post parameters to the http request
     post_req.write(post_data);
     post_req.end();
