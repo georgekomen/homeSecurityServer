@@ -1,20 +1,20 @@
 // We need this to build our post string
-var querystring = require('querystring');
-var https       = require('https');
+const querystring = require('querystring');
+const https       = require('https');
 // Your login credentials
-var username = 'georgekomen';
-var apikey   = 'e36225a6e5630d73cfd37d66cdbf042a171161d5415d811e43ed96321f9cb556';
-//SUNAMISOLAR
+const username = 'georgekomen';
+const apikey   = 'e36225a6e5630d73cfd37d66cdbf042a171161d5415d811e43ed96321f9cb556';
+
 exports.sendMessage = function(to, message) {
     // Build the post string from an object
-    var post_data = querystring.stringify({
+    const post_data = querystring.stringify({
         'username' : username,
         'to'       : to,
         'message'  : message,
         // 'from'     : 'SUNAMISOLAR'
     });
     
-    var post_options = {
+    const post_options = {
         host   : 'api.africastalking.com',
         path   : '/version1/messaging',
         method : 'POST',
@@ -31,7 +31,7 @@ exports.sendMessage = function(to, message) {
         }
     };
     
-    var post_req = https.request(post_options, function(res) {
+    const post_req = https.request(post_options, function(res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             var jsObject   = JSON.parse(chunk);
