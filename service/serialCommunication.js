@@ -1,5 +1,5 @@
 const SerialPort = require('serialport')
-const port = new SerialPort('/dev/serial1', { autoOpen: false })
+const port = new SerialPort('/dev/ttyS0', { autoOpen: false })
 
 exports.serialcommunication = () => {
     port.open((err) => {
