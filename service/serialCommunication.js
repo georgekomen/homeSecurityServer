@@ -1,5 +1,5 @@
 const SerialPort = require('serialport')
-const port = new SerialPort('/dev/tty-usbserial1', { autoOpen: false })
+const port = new SerialPort('/dev/serial1', { autoOpen: false })
 
 exports.serialcommunication = () => {
     port.open((err) => {
@@ -18,6 +18,7 @@ exports.serialcommunication = () => {
 
     // Read data that is available but keep the stream in "paused mode"
     port.on('readable', () => {
+        console.log('serial in')
         console.log('Data:', port.read());
     });
 }
