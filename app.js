@@ -4,11 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const scheduledjobs = require('./Service/scheduledjobs');
+const scheduledjobs = require('./service/scheduledjobs');
 const indexRouter = require('./routes/index');
 const actuator = require('./routes/actuator');
 const app = express();
-const vibroSensor = require('./Sensors/vibroSensor')
+const vibroSensor = require('./sensors/vibroSensor')
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup
