@@ -8,7 +8,7 @@ const scheduledjobs = require('./service/scheduledjobs');
 const indexRouter = require('./routes/index');
 const actuator = require('./routes/actuator');
 const app = express();
-const vibroSensor = require('./sensors/vibroSensor')
+const vibroSensor = require('./sensors/vibroSensor');
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup
