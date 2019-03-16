@@ -9,7 +9,7 @@ const indexRouter = require('./routes/index');
 const actuator = require('./routes/actuator');
 const app = express();
 const vibroSensor = require('./sensors/vibroSensor');
-const SerialPort = require('serialport');
+const serialCommunication = require('./service/serialCommunication');
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup
@@ -41,7 +41,8 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-scheduledjobs.schedulejob1();
-vibroSensor.senseVibration();
+// scheduledjobs.schedulejob1();
+// vibroSensor.senseVibration();
+serialCommunication.serialcommunication();
 
 module.exports = app;
