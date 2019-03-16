@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const africastalking = require('../Service/africastalking');
-const blink = require('../blink');
+const blink = require('../Actuators/blink');
 
 router.post('/blink', function(req, res, next) {
     blink.blinkGpio(req, res);
