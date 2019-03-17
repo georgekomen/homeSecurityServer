@@ -6,14 +6,16 @@ exports.serialcommunication = () => {
         if (err) {
             return console.log('Error opening port: ', err.message);
         }
+        console.log('serial open');
 
         // Because there's no callback to write, write errors will be emitted on the port:
-        port.write("AT+CGSN\r\n");
+        port.write('AT+CGSN\r\n');
     });
 
     // The open event is always emitted
     port.on('open', () => {
         // open logic
+        console.log('serial open event');
     });
 
     // Read data that is available but keep the stream in "paused mode"
