@@ -25,11 +25,6 @@ exports.serialcommunication = () => {
             console.log('results ' + results);
         });
 
-        port.write(new Buffer('AT','ascii'), function(err, results) {
-            console.log('err ' + err);
-            console.log('results ' + results);
-        });
-
         // Switches the port into "flowing mode"
         // port.on('data', (data) => {
         //     console.log('Data:', data);
