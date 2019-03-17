@@ -14,8 +14,6 @@ exports.serialcommunication = () => {
             console.log('Data:', port.read());
         });
 
-        port.write('AT');
-
         // Switches the port into "flowing mode"
         // port.on('data', (data) => {
         //     console.log('Data:', data);
