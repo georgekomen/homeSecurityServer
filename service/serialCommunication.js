@@ -7,23 +7,17 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
         console.log('serial open');
-
-        // Read data that is available but keep the stream in "paused mode"
-        port.on('readable', () => {
-            console.log('serial in');
-            console.log('Data:', port.read());
-        });
-
-        // Switches the port into "flowing mode"
-        // port.on('data', (data) => {
-        //     console.log('Data:', data);
-        // });
     });
 
-    // The open event is always emitted
-    port.on('open', () => {
-        // open logic
-        console.log('serial open event');
+    // Switches the port into "flowing mode"
+    // port.on('data', (data) => {
+    //     console.log('Data:', data);
+    // });
+
+    // Read data that is available but keep the stream in "paused mode"
+    port.on('readable', () => {
+        console.log('serial in');
+        console.log('Data:', port.read());
     });
 
     port.on('error', (err) => {
