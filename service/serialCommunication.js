@@ -14,13 +14,7 @@ exports.serialcommunication = () => {
             console.log('Data:', port.read());
         });
 
-        setTimeout(() => {
-            port.write('AT\r');
-        }, 1000);
-
-        setTimeout(() => {
-            port.write('AT');
-        }, 1000);
+        port.write('AT');
 
         // Switches the port into "flowing mode"
         // port.on('data', (data) => {
