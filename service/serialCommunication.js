@@ -15,7 +15,11 @@ exports.serialcommunication = () => {
         });
 
         setTimeout(() => {
-            port.write('ATE1\r');
+            port.write('AT\r');
+        }, 1000);
+
+        setTimeout(() => {
+            port.write('AT');
         }, 1000);
 
         // Switches the port into "flowing mode"
