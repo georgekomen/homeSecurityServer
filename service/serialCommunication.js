@@ -19,8 +19,13 @@ exports.serialcommunication = () => {
     });
 
     // Read data that is available but keep the stream in "paused mode"
-    port.on('readable', () => {
-        console.log('serial in');
-        console.log('Data:', port.read());
+    // port.on('readable', () => {
+    //     console.log('serial in');
+    //     console.log('Data:', port.read());
+    // });
+
+    // Switches the port into "flowing mode"
+    port.on('data', (data) => {
+        console.log('Data:', data);
     });
 }
