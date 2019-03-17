@@ -1,5 +1,5 @@
 const SerialPort = require('serialport');
-const port = new SerialPort('/dev/ttyS0', { autoOpen: false, baudRate: 9600 });
+const port = new SerialPort('/dev/ttyAMA0', { autoOpen: false, baudRate: 9600 });
 
 exports.serialcommunication = () => {
     port.open((err) => {
