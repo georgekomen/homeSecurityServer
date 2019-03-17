@@ -1,5 +1,5 @@
 const SerialPort = require('serialport');
-const port = new SerialPort('/dev/ttyS0', { autoOpen: false });
+const port = new SerialPort('/dev/ttyS0', { autoOpen: false, baudRate: 9600 });
 
 exports.serialcommunication = () => {
     port.open((err) => {
@@ -9,7 +9,7 @@ exports.serialcommunication = () => {
         console.log('serial open');
 
         // Because there's no callback to write, write errors will be emitted on the port:
-        port.write('AT+CGSN\r\n');
+        port.write('AT+CGSN');
     });
 
     // The open event is always emitted
