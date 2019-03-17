@@ -8,7 +8,7 @@ exports.serialcommunication = () => {
         }
 
         // Because there's no callback to write, write errors will be emitted on the port:
-        port.write('main screen turn on')
+        port.write("AT+CGSN\r\n");
     });
 
     // The open event is always emitted
