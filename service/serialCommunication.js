@@ -9,7 +9,7 @@ exports.serialcommunication = () => {
         console.log('serial open');
 
         // Because there's no callback to write, write errors will be emitted on the port:
-        port.write('AT+CGSN');
+        port.write('AT');
     });
 
     // The open event is always emitted
