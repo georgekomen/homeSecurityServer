@@ -17,27 +17,7 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write(Buffer.from('AT\r', 'ascii'), (err, res) => {
-            console.log(err, res);
-        });
-
-        parser.write(Buffer.from('AT\r', 'ascii'), (err, res) => {
-            console.log(err, res);
-        });
-
         port.write(Buffer.from('AT\n', 'ascii'), (err, res) => {
-            console.log(err, res);
-        });
-
-        parser.write(Buffer.from('AT\n', 'ascii'), (err, res) => {
-            console.log(err, res);
-        });
-
-        port.write(Buffer.from('AT', 'ascii'), (err, res) => {
-            console.log(err, res);
-        });
-
-        parser.write(Buffer.from('AT', 'ascii'), (err, res) => {
             console.log(err, res);
         });
 
