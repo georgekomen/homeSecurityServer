@@ -13,7 +13,7 @@ exports.serialcommunication = () => {
 
         parser.on('data', line => {
             console.log(`> ${line}`);
-            if(line ==='RING'){
+            if(line.includes('RING')){
                 console.log('receiving call');
                 port.write('"ATA\r\n"');
             }
