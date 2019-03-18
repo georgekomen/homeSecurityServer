@@ -1,5 +1,5 @@
 const serialport = require('serialport');
-const default_settings = {baudrate: 9600};
+const default_settings = {baudRate: 9600};
 const readline = require('@serialport/parser-readline')
 
 const port = new serialport('/dev/serial0', default_settings);
