@@ -17,7 +17,7 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write('AT\r\n');
+        // port.write('AT\r\n');
 
     });
 }
