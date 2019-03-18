@@ -7,24 +7,19 @@ exports.serialcommunication = () => {
         if (err) {
             return console.log('Error opening port: ', err.message);
         }
-        console.log('serial open');
 
         // Switches the port into "flowing mode"
         port.on('data', (data) => {
+            console.log('serial in');
             console.log('Data:', data);
         });
 
-        // Read data that is available but keep the stream in "paused mode"
-        port.on('readable', () => {
-            console.log('serial in');
-            console.log('Data:', port.read());
-        });
-
         port.on('error', (err) => {
-            console.log('node-serialport error!!!');
+            console.log('serial error!');
         });
 
         port.write('AT\r', (err, results) => {
+            console.log('writing serial');
             console.log(err, results);
         });
 
