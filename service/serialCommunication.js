@@ -1,5 +1,7 @@
-const SerialPort = require('serialport');
-const port = new SerialPort('/dev/serial0', { baudRate: 9600, parser: SerialPort.parsers.readline("\n")}, false);
+const serialport = require('serialport');
+const default_settings = {baudrate: 9600, parser: serialport.parsers.readline("\n")};
+
+const port = new serialport.SerialPort('/dev/serial0', default_settings, false);
 
 exports.serialcommunication = () => {
     port.open((err) => {
