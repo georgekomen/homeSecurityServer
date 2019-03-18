@@ -18,25 +18,19 @@ exports.serialcommunication = () => {
         });
 
         setTimeout(() => {
-            port.write('AT\n\r', (err, results) => {
-                console.log('writing serial');
-                console.log(err, results);
-            });
+            console.log('writing serial1');
+            port.write('AT\n\r');
         }, 500);
 
         setTimeout(() => {
-            port.write('AT\r\n', (err, results) => {
-                console.log('writing serial2');
-                console.log(err, results);
-            });
-        }, 1000);
+            console.log('writing serial2');
+            port.write('AT\r\n');
+        }, 1500);
 
         setTimeout(() => {
-            port.write('AT', (err, results) => {
-                console.log('writing serial3');
-                console.log(err, results);
-            });
-        }, 1500);
+            console.log('writing serial3');
+            port.write('AT');
+        }, 2000);
 
     });
 }
