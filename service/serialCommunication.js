@@ -17,9 +17,9 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        parser.write('AT\n');
-        parser.write('AT\r');
-        parser.write('AT');
+        parser.write('AT\n', (err, res) => {
+            console.log(err, res);
+        });
 
     });
 }
