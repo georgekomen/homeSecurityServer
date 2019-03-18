@@ -15,11 +15,11 @@ exports.serialcommunication = () => {
             console.log(`> ${line}`);
             if(line.includes('RING')){
                 console.log('receiving call');
-                port.write('ATA\n');
+                port.write('ATA');
             }
         });
 
-        port.on('data', data => console.log('data', data));
+        // port.on('data', data => console.log('data', data));
 
         port.on('error', (err) => {
             console.log('serial error!');
