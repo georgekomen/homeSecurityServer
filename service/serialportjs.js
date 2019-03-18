@@ -1,6 +1,6 @@
 var serialjs=require('serialport-js').node(); //thats the only difference
 //the rest of the implementation is exactly the same.
-exports.serialportjs => () => {
+exports.serialportjs = () => {
     serialjs.find(serialDevicesPopulated);
 
     function serialDevicesPopulated(ports){
