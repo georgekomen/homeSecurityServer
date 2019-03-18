@@ -20,7 +20,8 @@ exports.serialcommunication = () => {
                 setTimeout(() => {
                     console.log('receiving call');
                     parserReadLine.write('ATA\r\n');
-                    port.drain(res => {
+                    port.drain((err, res) => {
+                        console.log(err);
                         console.log(res);
                     });
                 }, 1000);
@@ -30,7 +31,8 @@ exports.serialcommunication = () => {
         setTimeout(() => {
             console.log('test write');
             port.write('AT\r\n');
-            port.drain(res => {
+            port.drain((err, res) => {
+                console.log(err);
                 console.log(res);
             });
         }, 500);

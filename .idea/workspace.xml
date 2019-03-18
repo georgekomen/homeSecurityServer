@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="131">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2982">
-              <caret line="345" column="73" selection-start-line="345" selection-start-column="73" selection-end-line="345" selection-end-column="73" />
+            <state relative-caret-position="138">
+              <caret line="553" column="21" lean-forward="true" selection-start-line="553" selection-start-column="21" selection-end-line="553" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -121,7 +121,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552943216240" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552943355611" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Actuators" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,12 +211,12 @@
       <workItem from="1552834642487" duration="1673000" />
       <workItem from="1552837264533" duration="2545000" />
       <workItem from="1552884731235" duration="13219000" />
-      <workItem from="1552928158211" duration="12548000" />
+      <workItem from="1552928158211" duration="12815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70102000" />
+    <option name="totallyTimeSpent" value="70369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -397,15 +397,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2982">
-          <caret line="345" column="73" selection-start-line="345" selection-start-column="73" selection-end-line="345" selection-end-column="73" />
+        <state relative-caret-position="138">
+          <caret line="553" column="21" lean-forward="true" selection-start-line="553" selection-start-column="21" selection-end-line="553" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="131">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
         </state>
       </provider>
     </entry>
