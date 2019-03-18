@@ -1,12 +1,15 @@
 const serialport = require('serialport');
 const default_settings = {baudRate: 9600, autoOpen: false };
 const readline = require('@serialport/parser-readline');
+const delimiter = require('@serialport/parser-delimiter');
 
 const port = new serialport('/dev/serial0', default_settings);
 
 exports.serialcommunication = () => {
-    const parser = new readline();
-    port.pipe(parser);
+    const lineparser = new readline();
+    const delparser = new delimiter();
+    port.pipe(lineparser);
+    port.pipe(delparser);
 
     port.open((err) => {
         if (err) {
