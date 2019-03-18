@@ -2,23 +2,23 @@ const serialport = require('serialport');
 const default_settings = {baudRate: 9600, autoOpen: false };
 const port = new serialport('/dev/serial0', default_settings);
 const Readline = require('@serialport/parser-readline');
-const parserReadLine =  new Readline();
+const parserReadLine =  new Readline({ delimiter: '\r\n' });
 const Delimiter = require('@serialport/parser-delimiter');
 const parserDelimeter = new Delimiter({ delimiter: '\r\n' });
 
 exports.serialcommunication = () => {
-    port.pipe(parserDelimeter);
-    // port.pipe(parserReadLine);
+    // port.pipe(parserDelimeter);
+    port.pipe(parserReadLine);
     port.open((err) => {
         if (err) {
             return console.log('Error opening port: ', err.message);
         }
         console.log('serial open');
-        parserDelimeter.on('data', data => {
+        parserReadLine.on('data', data => {
             console.log(`> ${data}`);
-            if(data.includes('RING')){
-                console.log('receiving call');
+            if(data.includes('RING')) {
                 setTimeout(() => {
+                    console.log('receiving call');
                     port.flush();
                     port.write('ATA\r\n');
                 }, 1000);
