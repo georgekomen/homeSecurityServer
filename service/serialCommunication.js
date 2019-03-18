@@ -19,9 +19,18 @@ exports.serialcommunication = () => {
             if(data.includes('RING')) {
                 setTimeout(() => {
                     console.log('receiving call');
-                    port.write('ATA');
+                    port.write('ATA', 'ascii' (err, res) => {
+                        console.log(err, res);
+                    });
                 }, 1000);
             }
         });
+
+        setTimeout(() => {
+            console.log('test write');
+            port.write('AT', 'ascii' (err, res) => {
+                console.log(err, res);
+            });
+        }, 1000);
     });
 }
