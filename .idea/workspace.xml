@@ -10,11 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="210">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="553" column="21" lean-forward="true" selection-start-line="553" selection-start-column="21" selection-end-line="553" selection-end-column="21" />
+            <state relative-caret-position="93">
+              <caret line="294" column="95" lean-forward="true" selection-start-line="294" selection-start-column="62" selection-end-line="294" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -45,6 +45,7 @@
       <find>Gpio</find>
       <find>path</find>
       <find>.write</find>
+      <find>write</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +122,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552943790003" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552943915012" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Actuators" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,12 +212,12 @@
       <workItem from="1552834642487" duration="1673000" />
       <workItem from="1552837264533" duration="2545000" />
       <workItem from="1552884731235" duration="13219000" />
-      <workItem from="1552928158211" duration="13095000" />
+      <workItem from="1552928158211" duration="13343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70649000" />
+    <option name="totallyTimeSpent" value="70897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -395,17 +396,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
+    <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="553" column="21" lean-forward="true" selection-start-line="553" selection-start-column="21" selection-end-line="553" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="93">
+          <caret line="294" column="95" lean-forward="true" selection-start-line="294" selection-start-column="62" selection-end-line="294" selection-end-column="95" />
         </state>
       </provider>
     </entry>

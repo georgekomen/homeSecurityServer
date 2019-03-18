@@ -30,7 +30,7 @@ exports.serialcommunication = () => {
 
         setTimeout(() => {
             console.log('test write');
-            port.write("AT", "ascii");
+            port.write(Buffer.from('AT', 'ascii'));
             port.drain((err, res) => {
                 console.log(err);
                 console.log(res);
