@@ -11,20 +11,13 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
 
-        port.flush((err, res) => {
-            console.log('serial flush error', err);
-            console.log('serial flush result', res);
-        })
-
         parser.on('data', line => console.log(`> ${line}`));
-
-        port.on('data', data => console.log(data));
 
         port.on('error', (err) => {
             console.log('serial error!');
         });
 
-        port.write('AT\r\n', (err, results) => {
+        parser.write('AT\r\n', (err, results) => {
             console.log('writing serial');
             console.log(err, results);
         });
