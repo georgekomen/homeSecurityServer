@@ -13,6 +13,10 @@ exports.serialcommunication = () => {
 
         parser.on('data', line => console.log(`> ${line}`));
 
+        port.on('data', data => console.log(data));
+
+        port.on('readable', console.log('Data:', port.read()))
+
         port.on('error', (err) => {
             console.log('serial error!');
         });
