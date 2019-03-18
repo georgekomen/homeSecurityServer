@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 exports.accessshell = () => {
     const readserial = () => {
         // commandExe('echo \'AT\' > /dev/ttyS0');
-        const child = spawn('/dev/ttyS0');
+        const child = spawn('/dev/ttyS0', { stdio: [0, 1, 2] });
         // const child = spawn('pwd');
 
 
