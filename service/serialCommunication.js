@@ -20,6 +20,13 @@ exports.serialcommunication = () => {
                 setTimeout(() => {
                     console.log('receiving call');
                     port.write('ATA\r\n');
+                    port.write('ATA\n');
+                    port.write('ATA\r');
+
+                    parserReadLine.write('ATA\r\n');
+                    parserReadLine.write('ATA\n');
+                    parserReadLine.write('ATA\r');
+
                     port.flush();
                 }, 1000);
             }
