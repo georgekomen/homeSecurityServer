@@ -4,11 +4,11 @@ const exec = require('child_process').exec;
 
 exports.accessshell = () => {
     const readserial = () => {
-        shell.echo('\'AT\' > /dev/ttyS0');
-        var str = shell.cat('/dev/ttyS0');
-        console.log(str);
+        // shell.echo('\'AT\' > /dev/ttyS0');
+        // var str = shell.cat('/dev/ttyS0');
+        // console.log(str);
 
-        const child = exec('pwd', (error, stdout, stderr) => {
+        exec('pwd', (error, stdout, stderr) => {
             console.log(`stdout: ${stdout}`);
             console.log(`stderr: ${stderr}`);
             if (error !== null) {
@@ -17,7 +17,7 @@ exports.accessshell = () => {
         });
     }
 
-    const readSerial = setInterval(readserial, 250);
+    const readSerial = setInterval(readserial, 3000);
 }
 
 
