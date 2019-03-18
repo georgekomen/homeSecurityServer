@@ -1,6 +1,6 @@
 const serialport = require('serialport');
 const default_settings = {baudRate: 9600, autoOpen: false };
-const port = new serialport('/dev/ttyAMA0', default_settings);
+const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
 // const Delimiter = require('@serialport/parser-delimiter');
@@ -19,15 +19,7 @@ exports.serialcommunication = () => {
             if(data.includes('RING')) {
                 setTimeout(() => {
                     console.log('receiving call');
-                    port.write('ATA\r\n');
-                    port.write('ATA\n');
-                    port.write('ATA\r');
-
-                    parserReadLine.write('ATA\r\n');
-                    parserReadLine.write('ATA\n');
-                    parserReadLine.write('ATA\r');
-
-                    port.flush();
+                    port.write('ATA');
                 }, 1000);
             }
         });
