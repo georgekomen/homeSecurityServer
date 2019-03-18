@@ -4,7 +4,7 @@ const exec = require('child_process').exec;
 
 exports.accessshell = () => {
     const readserial = () => {
-        commandExe('\'AT\' > /dev/ttyS0');
+        commandExe('echo \'AT\' > /dev/ttyS0');
         commandExe('cat /dev/ttyS0');
     }
 
