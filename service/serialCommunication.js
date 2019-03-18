@@ -14,11 +14,13 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
         console.log('serial open');
-        parserDelimeter.on('data', line => {
-            console.log(`> ${line}`);
-            if(line.includes('RING')){
+        parserDelimeter.on('data', data => {
+            console.log(`> ${data}`);
+            if(data.includes('RING')){
                 console.log('receiving call');
-                port.write('ATA\r\n');
+                setTimeout(() => {
+                    port.write('ATA\r\n');
+                }, 1000);
             }
         });
     });
