@@ -11,7 +11,13 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
 
-        parser.on('data', line => console.log(`> ${line}`));
+        parser.on('data', line => {
+            console.log(`> ${line}`);
+            if(line ==='RING'){
+                console.log('receiving call');
+                port.write('"ATA\r\n"');
+            }
+        });
 
         port.on('data', data => console.log('data', data));
 
@@ -19,10 +25,7 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write('AT\r\n', (err, results) => {
-            console.log('writing serial');
-            console.log(err, results);
-        });
+        port.write('AT\r\n');
 
     });
 }
