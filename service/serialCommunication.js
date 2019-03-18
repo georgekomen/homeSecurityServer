@@ -18,7 +18,7 @@ exports.serialcommunication = () => {
             console.log(`> ${line}`);
             if(line.includes('RING')){
                 console.log('receiving call');
-                port.write('ATA');
+                port.write('ATA\r\n');
             }
         });
     });
