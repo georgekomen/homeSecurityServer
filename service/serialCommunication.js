@@ -19,7 +19,7 @@ exports.serialcommunication = () => {
 
         setTimeout(() => {
             console.log('writing serial1');
-            parser.write('AT');
+            parser.write('AT\r');
         }, 500);
 
     });
