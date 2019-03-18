@@ -7,7 +7,7 @@ exports.accessshell = () => {
         const child = spawn('/dev/ttyS0');
         // const child = spawn('pwd');
 
-        process.stdin.pipe(child.stdin);
+        // process.stdin.pipe(child.stdin);
 
         child.stdout.on('data', (data) => {
             console.log(`child stdout:\n${data}`);
