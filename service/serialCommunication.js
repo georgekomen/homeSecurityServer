@@ -1,9 +1,9 @@
 const serialport = require('serialport');
 const default_settings = {baudRate: 9600, autoOpen: false };
 const readline = require('@serialport/parser-readline');
-const Delimiter = require('@serialport/parser-delimiter');
+const ByteLength = require('@serialport/parser-byte-length');
 const port = new serialport('/dev/serial0', default_settings);
-const parser = port.pipe(new Delimiter({ delimiter: '\n' }))
+const parser = port.pipe(new ByteLength({length: 8}));
 
 exports.serialcommunication = () => {
     const lineparser = new readline();
@@ -15,7 +15,7 @@ exports.serialcommunication = () => {
         }
         console.log('serial open');
 
-        parser.on('delimeter parser data', console.log) // emits data after every '\n'
+        parser.on('data', console.log) // emits data after every '\n'
 
         port.write('AT\r', (err, results) => {
             console.log(err, results);
