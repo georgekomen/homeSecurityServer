@@ -17,9 +17,14 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write('AT\r\n');
+        parser.write('AT\r\n');
 
         port.once('data', function(buffer){
+            if (buffer.toString() !== 'OK') { throw 'Not OK' }
+            console.log('done!');
+        });
+
+        parser.once('data', function(buffer){
             if (buffer.toString() !== 'OK') { throw 'Not OK' }
             console.log('done!');
         });
