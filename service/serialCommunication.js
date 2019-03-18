@@ -19,6 +19,7 @@ exports.serialcommunication = () => {
             if(data.includes('RING')){
                 console.log('receiving call');
                 setTimeout(() => {
+                    port.flush();
                     port.write('ATA\r\n');
                 }, 1000);
             }
