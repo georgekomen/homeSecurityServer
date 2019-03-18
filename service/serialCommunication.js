@@ -13,11 +13,13 @@ exports.serialcommunication = () => {
 
         parser.on('data', line => console.log(`> ${line}`));
 
+        port.on('data', data => console.log('data', data);
+
         port.on('error', (err) => {
             console.log('serial error!');
         });
 
-        parser.write('AT\r\n', (err, results) => {
+        port.write('AT\r\n', (err, results) => {
             console.log('writing serial');
             console.log(err, results);
         });
