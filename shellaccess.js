@@ -6,10 +6,9 @@ const port = new serialport('/dev/ttyS0');
 exports.accessshell = () => {
     const readserial = () => {
         // commandExe('echo \'AT\' > /dev/ttyS0');
-        const child = spawn('cat /dev/ttyS0');
+        const child = spawn(port.path);
         // const child = spawn('pwd');
 
-        console.log(port);
 
         process.stdin.pipe(child.stdin);
 
