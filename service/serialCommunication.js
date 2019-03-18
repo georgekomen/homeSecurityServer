@@ -19,7 +19,7 @@ exports.serialcommunication = () => {
             if(data.includes('RING')) {
                 setTimeout(() => {
                     console.log('receiving call');
-                    parserReadLine.write('ATA', 'utf8', (err, res) => {
+                    port.write('ATA', 'utf8', (err, res) => {
                         console.log(err, res);
                     });
                     port.drain(res => {
@@ -31,7 +31,7 @@ exports.serialcommunication = () => {
 
         setTimeout(() => {
             console.log('test write');
-            parserReadLine.write('AT', 'utf8', (err, res) => {
+            port.write('AT', 'utf8', (err, res) => {
                 console.log(err, res);
             });
             port.drain(res => {
