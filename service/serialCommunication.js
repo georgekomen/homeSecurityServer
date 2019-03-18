@@ -29,7 +29,7 @@ exports.serialcommunication = () => {
 
         setTimeout(() => {
             console.log('writing serial3');
-            port.write('AT');
+            parser.write('AT');
         }, 2000);
 
     });
