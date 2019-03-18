@@ -22,15 +22,5 @@ exports.serialcommunication = () => {
             parser.write('AT\n\r');
         }, 500);
 
-        setTimeout(() => {
-            console.log('writing serial2');
-            parser.write('AT\r\n');
-        }, 1500);
-
-        setTimeout(() => {
-            console.log('writing serial3');
-            parser.write('AT');
-        }, 2000);
-
     });
 }
