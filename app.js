@@ -10,7 +10,7 @@ const actuator = require('./routes/actuator');
 const app = express();
 const vibroSensor = require('./sensors/vibroSensor');
 const serialCommunication = require('./service/serialCommunication');
-const shellaccess = require('./shellaccess');
+const shellaccess = require('./service/shellaccess');
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup

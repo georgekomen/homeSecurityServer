@@ -1,12 +1,10 @@
 const shell = require('shelljs');
 const { spawn } = require('child_process');
-const serialport = require('serialport');
-const port = new serialport('/dev/ttyS0');
 
 exports.accessshell = () => {
     const readserial = () => {
         // commandExe('echo \'AT\' > /dev/ttyS0');
-        const child = spawn(port.path);
+        const child = spawn('/dev/ttyS0');
         // const child = spawn('pwd');
 
 

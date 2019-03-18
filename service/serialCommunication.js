@@ -31,6 +31,6 @@ exports.serialcommunication = () => {
             port.write('AT', 'ascii', (err, res) => {
                 console.log(err, res);
             });
-        }, 1000);
+        }, 500);
     });
 }
