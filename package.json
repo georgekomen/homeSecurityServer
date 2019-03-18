@@ -17,6 +17,7 @@
     "onoff": "^4.1.0",
     "pug": "2.0.0-beta11",
     "request": "^2.87.0",
-    "serialport": "^7.1.4"
+    "serialport": "^7.1.4",
+    "serialport-js": "^1.1.0"
   }
 }
