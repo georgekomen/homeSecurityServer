@@ -12,7 +12,7 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
 
-        parserDelimeter.on('data', line => {
+        parserReadLine.on('data', line => {
             console.log(`> ${line}`);
             if(line.includes('RING')){
                 console.log('receiving call');
