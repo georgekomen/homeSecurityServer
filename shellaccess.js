@@ -4,7 +4,7 @@ const exec = require('child_process').exec;
 
 exports.accessshell = () => {
     const readserial = () => {
-        // commandExe('\'AT\' > /dev/ttyS0');
+        commandExe('\'AT\' > /dev/ttyS0');
         commandExe('cat /dev/ttyS0');
     }
 
@@ -23,7 +23,7 @@ exports.accessshell = () => {
         });
     }
 
-    const readSerial = setInterval(readserial, 3000);
+    const readSerial = setInterval(readserial, 10000);
 }
 
 
