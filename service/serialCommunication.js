@@ -34,7 +34,7 @@ exports.serialcommunication = () => {
             parserReadLine.write('AT', 'utf8', (err, res) => {
                 console.log(err, res);
             });
-            port.drain(res => {
+            parserReadLine.drain(res => {
                 console.log(res);
             });
         }, 500);
