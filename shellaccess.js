@@ -5,7 +5,7 @@ const exec = require('child_process').exec;
 exports.accessshell = () => {
     const readserial = () => {
         shell.echo('\'AT\' > /dev/ttyS0');
-        var str = cat('/dev/ttyS0');
+        var str = shell.cat('/dev/ttyS0');
         console.log(str);
 
         const child = exec('pwd', (error, stdout, stderr) => {
