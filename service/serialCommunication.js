@@ -13,12 +13,6 @@ exports.serialcommunication = () => {
 
         parser.on('data', line => console.log(`> ${line}`));
 
-        // Switches the port into "flowing mode"
-        port.on('data', (data) => {
-            console.log('serial in');
-            console.log('Data:', data);
-        });
-
         port.on('error', (err) => {
             console.log('serial error!');
         });
