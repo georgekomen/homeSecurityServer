@@ -4,15 +4,21 @@ const exec = require('child_process').exec;
 
 exports.accessshell = () => {
     const readserial = () => {
-        // shell.echo('\'AT\' > /dev/ttyS0');
-        // var str = shell.cat('/dev/ttyS0');
-        // console.log(str);
+        // commandExe('\'AT\' > /dev/ttyS0');
+        commandExe('cat /dev/ttyS0');
+    }
 
-        exec('pwd', (error, stdout, stderr) => {
+    const commandExe = (command) => {
+        console.log(command);
+        exec(command, (error, stdout, stderr) => {
             console.log(`stdout: ${stdout}`);
-            console.log(`stderr: ${stderr}`);
-            if (error !== null) {
+
+            if (error) {
                 console.log(`exec error: ${error}`);
+            }
+
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
             }
         });
     }
