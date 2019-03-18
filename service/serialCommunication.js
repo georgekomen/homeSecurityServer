@@ -1,5 +1,5 @@
 const serialport = require('serialport');
-const default_settings = {baudRate: 9600, autoOpen: false, parser: serialport.parsers.readline("\n") };
+const default_settings = {baudRate: 9600, autoOpen: false };
 const port = new serialport('/dev/serial0', default_settings);
 
 exports.serialcommunication = () => {
@@ -8,7 +8,6 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message);
         }
         console.log('serial open');
-
 
         // Switches the port into "flowing mode"
         port.on('data', (data) => {
