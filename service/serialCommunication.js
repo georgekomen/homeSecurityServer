@@ -22,7 +22,21 @@ exports.serialcommunication = () => {
                 console.log('writing serial');
                 console.log(err, results);
             });
-        })
+        }, 500);
+
+        setTimeout(() => {
+            port.write('AT\r\n', (err, results) => {
+                console.log('writing serial2');
+                console.log(err, results);
+            });
+        }, 1000);
+
+        setTimeout(() => {
+            port.write('AT', (err, results) => {
+                console.log('writing serial3');
+                console.log(err, results);
+            });
+        }, 1500);
 
     });
 }
