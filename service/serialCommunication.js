@@ -17,8 +17,11 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write(Buffer.from('AT\n', 'ascii'), (err, res) => {
-            console.log(err, res);
+        port.write('AT\r\n');
+
+        port.once('data', function(buffer){
+            if (buffer.toString() !== 'OK') { throw 'Not OK' }
+            console.log('done!');
         });
 
     });
