@@ -17,10 +17,12 @@ exports.serialcommunication = () => {
             console.log('serial error!');
         });
 
-        port.write('AT\r', (err, results) => {
-            console.log('writing serial');
-            console.log(err, results);
-        });
+        setTimeout(() => {
+            port.write('AT\n\r', (err, results) => {
+                console.log('writing serial');
+                console.log(err, results);
+            });
+        })
 
     });
 }
