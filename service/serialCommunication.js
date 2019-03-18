@@ -1,9 +1,13 @@
 const serialport = require('serialport');
-const default_settings = {baudrate: 9600, parser: serialport.parsers.readline("\n")};
+const default_settings = {baudrate: 9600};
+const readline = require('@serialport/parser-readline')
 
 const port = new serialport.SerialPort('/dev/serial0', default_settings, false);
 
 exports.serialcommunication = () => {
+    const parser = new readline()
+    port.pipe(parser)
+
     port.open((err) => {
         if (err) {
             return console.log('Error opening port: ', err.message);
