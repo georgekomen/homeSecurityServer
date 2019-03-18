@@ -19,12 +19,12 @@ exports.serialcommunication = () => {
 
         setTimeout(() => {
             console.log('writing serial1');
-            port.write('AT\n\r');
+            parser.write('AT\n\r');
         }, 500);
 
         setTimeout(() => {
             console.log('writing serial2');
-            port.write('AT\r\n');
+            parser.write('AT\r\n');
         }, 1500);
 
         setTimeout(() => {
