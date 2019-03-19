@@ -44,6 +44,6 @@ app.use((err, req, res, next) => {
 
 // scheduledjobs.schedulejob1();
 // vibroSensor.senseVibration();
-// serialCommunication.serialcommunication();
-shellaccess.accessshell();
+serialCommunication.serialcommunication();
+// shellaccess.accessshell();
 module.exports = app;
