@@ -22,7 +22,7 @@ exports.serialcommunication = () => {
         //     console.log('Set Done');
         // });
 
-        port.write('AT\n');
+        port._write(Buffer.from('AT', 'ascii'));
 
         parserReadLine.on('data', data => {
             console.log(`> ${data}`);
