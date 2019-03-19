@@ -1,5 +1,5 @@
 const serialport = require('serialport');
-const default_settings = {baudRate: 9600, autoOpen: false };
+const default_settings = {baudRate: 9600, autoOpen: false, lock: false };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });

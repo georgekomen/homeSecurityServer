@@ -8,25 +8,18 @@ exports.accessshell = () => {
 
         process.stdin.pipe(child.stdin);
 
-        try {
-            child.stdout.on('data', (data) => {
-                console.log(`child stdout:\n${data}`);
-            });
+        child.stdout.on('data', (data) => {
+            console.log(`child stdout:\n${data}`);
+        });
 
-            child.stderr.on('data', (data) => {
-                console.error(`child stderr:\n${data}`);
-            });
+        child.stderr.on('data', (data) => {
+            console.error(`child stderr:\n${data}`);
+        });
 
-            child.on('error', (data) => {
-                console.error(`child error:\n${data}`);
-            });
-        } catch (e) {
-            
-        }
-        
-
+        child.on('error', (data) => {
+            console.error(`child error:\n${data}`);
+        });
     };
-
     readserial();
 };
 
