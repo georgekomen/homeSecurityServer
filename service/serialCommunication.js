@@ -17,27 +17,8 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message)
         }
 
-        // port.set({dtr: true, rts: false}, (err) => {
-        //     if(err) {
-        //         console.log('Set Error: ', err.message);
-        //     }
-        //     console.log('Set Done');
-        // });
-
         // port._write(Buffer.from('AT', 'ascii'));
-        port.write(Buffer.from('AT', 'ascii'));
-
-        var buffer = new Buffer(9);
-        buffer[0] = 0x01;
-        buffer[1] = 0x30;
-        buffer[2] = 0x02;
-        buffer[3] = 0x07;
-        buffer[4] = 0x00;
-        buffer[5] = 0x00;
-        buffer[6] = 0x02;
-        buffer[7] = 0x00;
-        buffer[8] = 0x00;
-        port.write(buffer, function(err) {
+        port.write(Buffer.from('AT', 'ascii'), function(err) {
             if (err) {
                 return console.log('Error on write: ', err.message);
             }
