@@ -1,5 +1,5 @@
 const serialport = require('serialport');
-const default_settings = {baudRate: 9600, autoOpen: false, lock: false };
+const default_settings = {baudRate: 9600, autoOpen: true, lock: false };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
@@ -9,29 +9,20 @@ const parserReadLine =  new Readline({ delimiter: '\r\n' });
 exports.serialcommunication = () => {
     // port.pipe(parserDelimeter);
     port.pipe(parserReadLine);
-    port.open((err) => {
-        if (err) {
-            return console.log('Error opening port: ', err.message);
-        }
-        console.log('serial open');
-        parserReadLine.on('data', data => {
-            console.log(`> ${data}`);
-            if(data.includes('RING')) {
-                setTimeout(() => {
-                    console.log('receiving call');
-                    port.write('ATA', 'ascii');
-                    port.drain((err, res) => {
-                        console.log(err);
-                        console.log(res);
-                    });
-                }, 1000);
-            }
-        });
-
-        setTimeout(() => {
-            console.log('test write');
-            port.write(Buffer.from('AT', 'ascii'));
+    parserReadLine.on('data', data => {
+        console.log(`> ${data}`);
+        if(data.includes('RING')) {
+            console.log('receiving call');
+            port.write('ATA');
             port.drain();
-        }, 500);
+        }
     });
-}
+
+    port.write('AT');
+    port.drain();
+
+    // Open errors will be emitted as an error event
+    port.on('error', (err) => {
+        console.log('Error: ', err.message);
+    });
+};
