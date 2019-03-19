@@ -19,6 +19,5 @@
     "pug": "2.0.0-beta11",
     "request": "^2.87.0",
     "serialport": "^7.1.4",
-    "shelljs": "^0.8.3"
   }
 }
