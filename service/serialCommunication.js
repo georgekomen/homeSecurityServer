@@ -19,6 +19,7 @@ exports.serialcommunication = () => {
             console.log('receiving call');
             port.write('ATA');
             port.drain();
+            port.close();
         }
     });
 
