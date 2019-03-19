@@ -10,16 +10,13 @@ exports.serialcommunication = () => {
     // port.pipe(parserDelimeter);
     port.pipe(parserReadLine);
 
-    port.write('AT');
-    port.drain();
+    port.write('AT\n');
 
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
             console.log('receiving call');
-            port.write('ATA');
-            port.drain();
-            port.close();
+            port.write('ATA\r');
         }
     });
 
