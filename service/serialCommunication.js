@@ -1,5 +1,7 @@
 const serialport = require('serialport');
-const default_settings = { baudRate: 9600, autoOpen: false, lock: false };
+const default_settings =
+    { baudRate: 9600, autoOpen: false, lock: false, dataBits: 8,
+        parity: 'none', stopBits: 1, flowControl: false };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
@@ -23,6 +25,7 @@ exports.serialcommunication = () => {
         // });
 
         port._write(Buffer.from('AT', 'ascii'));
+        port.write(Buffer.from('AT', 'ascii'));
 
         parserReadLine.on('data', data => {
             console.log(`> ${data}`);
