@@ -1,5 +1,5 @@
 const serialport = require('serialport');
-const default_settings = {baudRate: 9600, autoOpen: false, lock: false };
+const default_settings = { baudRate: 9600, autoOpen: false, lock: false, highWaterMark: 55 };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
@@ -15,12 +15,12 @@ exports.serialcommunication = () => {
             return console.log('Error opening port: ', err.message)
         }
 
-        port.set({dtr: true, rts: false}, (err) => {
-            if(err) {
-                console.log('Set Error: ', err.message);
-            }
-            console.log('Set Done');
-        });
+        // port.set({dtr: true, rts: false}, (err) => {
+        //     if(err) {
+        //         console.log('Set Error: ', err.message);
+        //     }
+        //     console.log('Set Done');
+        // });
 
         port.write('AT\n');
 
