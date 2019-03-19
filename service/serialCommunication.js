@@ -9,6 +9,10 @@ const parserReadLine =  new Readline({ delimiter: '\r\n' });
 exports.serialcommunication = () => {
     // port.pipe(parserDelimeter);
     port.pipe(parserReadLine);
+
+    port.write('AT');
+    port.drain();
+
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
@@ -17,9 +21,6 @@ exports.serialcommunication = () => {
             port.drain();
         }
     });
-
-    port.write('AT');
-    port.drain();
 
     // Open errors will be emitted as an error event
     port.on('error', (err) => {
