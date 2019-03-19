@@ -1,4 +1,6 @@
 const serialport = require('serialport');
+const myBindingClass = require('@serialport/stream');
+serialport.Binding = myBindingClass;
 const default_settings = { baudRate: 9600, autoOpen: false, lock: false, highWaterMark: 55 };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
