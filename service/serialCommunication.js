@@ -18,7 +18,7 @@ exports.serialcommunication = () => {
         }
 
         // port._write(Buffer.from('AT', 'ascii'));
-        port.write(Buffer.from('AT', 'ascii'), function(err) {
+        port._write(Buffer.from('AT', 'ascii'), function(err) {
             if (err) {
                 return console.log('Error on write: ', err.message);
             }
