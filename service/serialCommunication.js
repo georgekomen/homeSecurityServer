@@ -1,7 +1,7 @@
 const serialport = require('serialport');
 const default_settings =
-    { baudRate: 9600, autoOpen: true, lock: false, dataBits: 8,
-        parity: 'none', stopBits: 1, flowControl: false };
+    { baudRate: 9600, autoOpen: true, dataBits: 8,
+        parity: 'none', stopBits: 1 };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
@@ -15,7 +15,6 @@ exports.serialcommunication = () => {
     // port._write(Buffer.from('AT', 'ascii'));
     port.write("AT+CMGF=1");
     port.write('\r');
-    port.write('\n');
 
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
@@ -23,10 +22,6 @@ exports.serialcommunication = () => {
             console.log('receiving call');
             port.write('ATA\r');
         }
-    });
-
-    port.on('data', data => {
-       console.log(data);
     });
 
     // Open errors will be emitted as an error event
