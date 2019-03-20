@@ -29,7 +29,10 @@ exports.serialcommunication = () => {
             port.write('AT+DDET=1\r\n'); //enable dtmf
             port.write('ATA\r\n'); //receive call
         }
-        port.write('AT+VTS=1\r\n');
+        if(data.includes('DTMF')) {
+            const code = data[data.length -1];
+            port.write(`AT+VTS=${code}\r\n`);
+        }
     });
 
     port.on('error', (err) => {
