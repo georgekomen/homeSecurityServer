@@ -48,6 +48,8 @@ exports.serialcommunication = () => {
         port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r\n');
         port.write('AT+SAPBR=1,1\r\n');
         port.write('AT+HTTPINIT\r\n');//initialize internet
-        port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
+        setTimeout(() => {
+            port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
+        }, 5000);
     }
 };
