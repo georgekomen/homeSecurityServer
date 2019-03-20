@@ -19,8 +19,8 @@ exports.serialcommunication = () => {
             console.log('Set Done');
         });
 
-        port.write('AT\r\n');
-        port.write('AT+CLIP=1\r\n');// display caller id
+        port.write('AT\r');
+        port.write('AT+CLIP=1\r');// display caller id
 
         setupInternet();
         getGpsLocation();
@@ -30,13 +30,13 @@ exports.serialcommunication = () => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
             console.log('receiving call');
-            port.write('AT+DDET=1\r\n'); //enable dtmf
-            port.write('ATA\r\n'); //receive call
+            port.write('AT+DDET=1\r'); //enable dtmf
+            port.write('ATA\r'); //receive call
 
         }
         if(data.includes('DTMF')) {
             const code = data[data.length -1];
-            port.write(`AT+VTS=${code}\r\n`);
+            port.write(`AT+VTS=${code}\r`);
         }
     });
 
@@ -46,17 +46,18 @@ exports.serialcommunication = () => {
 
     const setupInternet = () => {
         port.write('AT+CGATT=1\r\n');
-        port.write('AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"\r\n');
-        port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r\n');
+        port.write('AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"\r');
+        port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r');
         // port.write('AT+SAPBR=3,1,\"APN\",\"internet\"\r\n');//airtel
-        port.write('AT+SAPBR=1,1\r\n');//Enable the GPRS
-        port.write('AT+SAPBR=2,1\r\n');//Query if the connection is setup properly
-        port.write('AT+HTTPINIT\r\n');//enable http mode
+        port.write('AT+SAPBR=1,1\r');//Enable the GPRS
+        port.write('AT+SAPBR=2,1\r');//Query if the connection is setup properly
+        port.write('AT+HTTPINIT\r');//enable http mode
     };
 
     const getGpsLocation = () => {
         setTimeout(() => {
+            console.log('getting gps location');
             port.write('AT+CIPGSMLOC=1,1\r'); //get gps loc
-        }, 5000);
+        }, 15000);
     };
 };
