@@ -19,24 +19,24 @@ exports.serialcommunication = () => {
             console.log('Set Done');
         });
 
-        port.write('AT\r');
+        port.write('AT\r\n');
 
         setupInternet();
 
-        port.write('AT+CIPGSMLOC=1,1\r'); //get gps loc
+        port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
     });
 
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
             console.log('receiving call');
-            port.write('AT+DDET=1\r'); //enable dtmf
-            port.write('ATA\r'); //receive call
+            port.write('AT+DDET=1\r\n'); //enable dtmf
+            port.write('ATA\r\n'); //receive call
 
         }
         if(data.includes('DTMF')) {
             const code = data[data.length -1];
-            port.write(`AT+VTS=${code}\r`);
+            port.write(`AT+VTS=${code}\r\n`);
         }
     });
 
@@ -45,9 +45,9 @@ exports.serialcommunication = () => {
     });
 
     const setupInternet = () => {
-        port.write('AT+CGATT=1\r');
-        port.write('AT+SAPBR=3,1,\'CONTYPE\',\'GPRS\'\r');
-        port.write('AT+SAPBR=3,1,\'APN\',\'safaricom\'\r');
-        port.write('AT+SAPBR=1,1\r');
+        port.write('AT+CGATT=1\r\n');
+        port.write('AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"\r\n');
+        port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r\n');
+        port.write('AT+SAPBR=1,1\r\n');
     }
 };
