@@ -19,16 +19,16 @@ exports.serialcommunication = () => {
             console.log('Set Done');
         });
 
-        port.write("AT+CMGF=1\r");
+        port.write("AT+CMGF=1\r\n");
     });
 
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
             console.log('receiving call');
-            port.write('AT+DDET=1\r'); //enable dtmf
-            port.write('ATA\r'); //receive call
-            // generate dtmf - AT+VTS=0\r\n
+            port.write('AT+DDET=1\r\n'); //enable dtmf
+            port.write('ATA\r\n'); //receive call
+            port.write('AT+VTS=0\r\n');
         }
     });
 
