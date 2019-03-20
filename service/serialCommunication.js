@@ -18,12 +18,8 @@ exports.serialcommunication = () => {
         }
 
         // port._write(Buffer.from('AT', 'ascii'));
-        port._write(Buffer.from('AT', 'ascii'), function(err) {
-            if (err) {
-                return console.log('Error on write: ', err.message);
-            }
-            console.log('message written');
-        });
+        port.write("ATA");
+        port.write('\r');
 
         parserReadLine.on('data', data => {
             console.log(`> ${data}`);
