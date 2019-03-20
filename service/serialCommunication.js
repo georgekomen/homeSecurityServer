@@ -13,7 +13,7 @@ exports.serialcommunication = () => {
     port.pipe(parserReadLine); port.write('ATA\r');
 
     // port._write(Buffer.from('AT', 'ascii'));
-    port.write("AT");
+    port.write("AT+CMGF=1");
     port.write('\r');
 
     parserReadLine.on('data', data => {

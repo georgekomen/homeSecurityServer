@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad86497d-7b7d-4568-a29b-0509db433c61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/service/serialCommunication.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/serialCommunication.js" afterDir="false" />
-    </list>
+    <list default="true" id="ad86497d-7b7d-4568-a29b-0509db433c61" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="165">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -258,7 +256,7 @@
       <workItem from="1553003465462" duration="245000" />
       <workItem from="1553003719351" duration="198000" />
       <workItem from="1553013721018" duration="269000" />
-      <workItem from="1553056222921" duration="247000" />
+      <workItem from="1553056222921" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="#">
       <created>1553032767091</created>
@@ -271,11 +269,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88562000" />
+    <option name="totallyTimeSpent" value="88918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" weight="0.24914089" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28172207" />
@@ -491,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="165">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
