@@ -26,7 +26,8 @@ exports.serialcommunication = () => {
         console.log(`> ${data}`);
         if(data.includes('RING')) {
             console.log('receiving call');
-            port.write('ATA\r');
+            port.write('AT+DDET=1\r'); //enable dtmf
+            port.write('ATA\r'); //receive call
         }
     });
 
