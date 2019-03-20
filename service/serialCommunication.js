@@ -49,5 +49,6 @@ exports.serialcommunication = () => {
         port.write('AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"\r\n');
         port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r\n');
         port.write('AT+SAPBR=1,1\r\n');
+        port.write('AT+HTTPINIT\r\n');
     }
 };
