@@ -1,10 +1,7 @@
-const serialport = require('serialport/test'); // TODO - remove /test
+const serialport = require('serialport');
 const default_settings = { baudRate: 9600, autoOpen: true, dataBits: 8, parity: 'none', stopBits: 1 };
 
-const MockBinding = serialport.Binding;// TODO remove
-MockBinding.createPort('/dev/ROBOT', { echo: true, record: true }); //TODO remove
-
-const port = new serialport('/dev/ROBOT', default_settings);//TODO - change /dev/ROBOT to /dev/ttyS0
+const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
 
