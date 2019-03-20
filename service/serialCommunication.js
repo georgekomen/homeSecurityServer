@@ -28,6 +28,7 @@ exports.serialcommunication = () => {
             console.log('receiving call');
             port.write('AT+DDET=1\r'); //enable dtmf
             port.write('ATA\r'); //receive call
+            // generate dtmf - AT+VTS=0\r\n
         }
     });
 
