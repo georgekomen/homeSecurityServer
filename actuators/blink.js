@@ -1,12 +1,12 @@
 const five = require("johnny-five");
-const board = new five.Board();
-
+const Raspi = require("raspi-io");
+const board = new five.Board({
+                               io: new Raspi()
+                           });
 exports.blinkled = () => {
     board.on("ready", () => {
-        console.log('johnny ready');
-        // Create an Led on pin 5
-        const led = new five.Led(5);
-        // Blink every half second
-        led.blink(500);
+        console.log('blink ready');
+        const led = new five.Led('GPIO5');
+        led.blink(1000);
     });
 };
