@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="315">
+              <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -81,7 +81,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="homesecurityserver" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="homesecurityserver" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
@@ -89,7 +99,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553091089532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553092145882" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -195,7 +205,7 @@
       <workItem from="1553061171270" duration="591000" />
       <workItem from="1553082014193" duration="4680000" />
       <workItem from="1553087859289" duration="488000" />
-      <workItem from="1553088753963" duration="2422000" />
+      <workItem from="1553088753963" duration="3330000" />
     </task>
     <task id="LOCAL-00001" summary="#">
       <created>1553032767091</created>
@@ -208,14 +218,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97769000" />
+    <option name="totallyTimeSpent" value="98677000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="1725" y="67" width="1356" height="942" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" weight="0.24914089" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3028701" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30517504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -234,7 +244,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32847896" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3277027" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.48863637" visible="true" weight="0.39695945" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.48863637" visible="true" weight="0.296343" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32686085" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32847896" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32847896" />
@@ -429,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="315">
+          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
         </state>
       </provider>
     </entry>

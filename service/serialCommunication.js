@@ -20,6 +20,7 @@ exports.serialcommunication = () => {
         });
 
         port.write('AT\r\n');
+        port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
     });
 
     parserReadLine.on('data', data => {
@@ -28,7 +29,7 @@ exports.serialcommunication = () => {
             console.log('receiving call');
             port.write('AT+DDET=1\r\n'); //enable dtmf
             port.write('ATA\r\n'); //receive call
-            port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
+
         }
         if(data.includes('DTMF')) {
             const code = data[data.length -1];
