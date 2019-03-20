@@ -1,24 +1,11 @@
-const Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-const LED = new Gpio(5, 'out'); //use GPIO pin 5, and specify that it is output
+const five = require("johnny-five");
+const board = new five.Board();
 
-exports.blinkGpio = (req, res) => {
-
-  const blinkLED = () => { //function to start blinking
-    if (LED.readSync() === 0) { //check the pin state, if the state is 0 (or off)
-      LED.writeSync(1); //set pin state to 1 (turn LED on)
-    } else {
-      LED.writeSync(0); //set pin state to 0 (turn LED off)
-    }
-  };
-
-  const endBlink = () => { //function to stop blinking
-    clearInterval(blinkInterval); // Stop blink intervals
-    LED.writeSync(0); // Turn LED off
-    res.send('blink ended');
-    // LED.unexport(); // Unexport GPIO to free resources
-  };
-
-  const blinkInterval = setInterval(blinkLED, 250); //run the blinkLED function every 250ms
-
-  setTimeout(endBlink, 5000); //stop blinking after 5 seconds
+exports.blinkled = () => {
+    board.on("ready", () => {
+        // Create an Led on pin 5
+        const led = new five.Led(5);
+        // Blink every half second
+        led.blink(500);
+    });
 };

@@ -1,6 +1,6 @@
 // We need this to build our post string
 const querystring = require('querystring');
-const https       = require('https');
+const https = require('https');
 // Your login credentials
 const username = 'georgekomen';
 const apikey   = 'e36225a6e5630d73cfd37d66cdbf042a171161d5415d811e43ed96321f9cb556';
@@ -18,11 +18,9 @@ exports.sendMessage = (to, message) => {
         host   : 'api.africastalking.com',
         path   : '/version1/messaging',
         method : 'POST',
-        
         rejectUnauthorized : false,
         requestCert        : true,
         agent              : false,
-        
         headers: {
             'Content-Type' : 'application/x-www-form-urlencoded',
             'Content-Length': post_data.length,
@@ -33,7 +31,7 @@ exports.sendMessage = (to, message) => {
     
     const post_req = https.request(post_options, (res) => {
         res.setEncoding('utf8');
-        res.on('data', function (chunk) {
+        res.on('data', (chunk) => {
             const jsObject   = JSON.parse(chunk);
             const recipients = jsObject.SMSMessageData.Recipients;
             if ( recipients.length > 0 ) {
