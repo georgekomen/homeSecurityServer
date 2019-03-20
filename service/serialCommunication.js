@@ -20,6 +20,8 @@ exports.serialcommunication = () => {
         });
 
         port.write('AT\r\n');
+        setupInternet();
+
         port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
     });
 
@@ -40,4 +42,12 @@ exports.serialcommunication = () => {
     port.on('error', (err) => {
         console.log('Error: ', err.message);
     });
+
+
+    const setupInternet = () => {
+        port.write('AT+CGATT=1');
+        port.write("AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"");
+        port.write("AT+SAPBR=3,1,\"APN\",\"safaricom\"");
+        port.write("AT+SAPBR=1,1");
+    }
 };
