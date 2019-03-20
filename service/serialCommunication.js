@@ -49,8 +49,9 @@ exports.serialcommunication = () => {
         port.write('AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"\r\n');
         port.write('AT+SAPBR=3,1,\"APN\",\"safaricom\"\r\n');
         // port.write('AT+SAPBR=3,1,\"APN\",\"internet\"\r\n');//airtel
-        port.write('AT+SAPBR=1,1\r\n');
-        port.write('AT+HTTPINIT\r\n');//initialize internet
+        port.write('AT+SAPBR=1,1\r\n');//Enable the GPRS
+        port.write('AT+SAPBR=2,1\r\n');//Query if the connection is setup properly
+        port.write('AT+HTTPINIT\r\n');//enable http mode
     };
 
     const getGpsLocation = () => {
