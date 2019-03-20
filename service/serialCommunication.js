@@ -43,6 +43,11 @@ exports.serialcommunication = () => {
         console.log('Error: ', err.message);
     });
 
+    port.on('write', () => {
+        sleep(1000, function() {
+            console.log('sleep one second');
+        });
+    });
 
     const setupInternet = () => {
         port.write('AT+CGATT=1');
