@@ -18,7 +18,7 @@ exports.serialcommunication = () => {
         }
 
         // port._write(Buffer.from('AT', 'ascii'));
-        port.write("ATA");
+        port.write("AT");
         port.write('\r');
 
         parserReadLine.on('data', data => {
