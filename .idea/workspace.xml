@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="100">
+              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -87,7 +87,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553090215440" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553090468863" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1553061171270" duration="591000" />
       <workItem from="1553082014193" duration="4680000" />
       <workItem from="1553087859289" duration="488000" />
-      <workItem from="1553088753963" duration="1715000" />
+      <workItem from="1553088753963" duration="2127000" />
     </task>
     <task id="LOCAL-00001" summary="#">
       <created>1553032767091</created>
@@ -206,11 +206,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97062000" />
+    <option name="totallyTimeSpent" value="97474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" weight="0.24914089" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3028701" />
@@ -427,8 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="100">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>
