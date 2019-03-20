@@ -15,6 +15,7 @@ exports.serialcommunication = () => {
     // port._write(Buffer.from('AT', 'ascii'));
     port.write("AT+CMGF=1");
     port.write('\r');
+    port.write('\n');
 
     parserReadLine.on('data', data => {
         console.log(`> ${data}`);
