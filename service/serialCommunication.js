@@ -56,7 +56,7 @@ exports.serialcommunication = () => {
 
     const getGpsLocation = () => {
         setTimeout(() => {
-            port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
+            port.write('AT+CIPGSMLOC=1,1\r'); //get gps loc
         }, 5000);
     };
 };
