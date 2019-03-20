@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+            <state relative-caret-position="175">
+              <caret line="54" column="6" lean-forward="true" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -101,7 +101,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553112336218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553112979576" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -208,7 +208,7 @@
       <workItem from="1553082014193" duration="4680000" />
       <workItem from="1553087859289" duration="488000" />
       <workItem from="1553088753963" duration="4626000" />
-      <workItem from="1553099988031" duration="6608000" />
+      <workItem from="1553099988031" duration="7279000" />
     </task>
     <task id="LOCAL-00001" summary="#">
       <created>1553032767091</created>
@@ -308,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553112256818</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="remove more \n, increase get location time">
+      <created>1553112383738</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1553112383738</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106581000" />
+    <option name="totallyTimeSpent" value="107252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -416,7 +423,8 @@
     <MESSAGE value="display caller id" />
     <MESSAGE value="print internet setup" />
     <MESSAGE value="remove \n" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove \n" />
+    <MESSAGE value="remove more \n, increase get location time" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove more \n, increase get location time" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -580,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serialCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+        <state relative-caret-position="175">
+          <caret line="54" column="6" lean-forward="true" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
         </state>
       </provider>
     </entry>
