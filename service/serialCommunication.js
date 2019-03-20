@@ -50,6 +50,6 @@ exports.serialcommunication = () => {
         port.write('AT+HTTPINIT\r\n');//initialize internet
         setTimeout(() => {
             port.write('AT+CIPGSMLOC=1,1\r\n'); //get gps loc
-        }, 5000);
+        }, 10000);
     }
 };
