@@ -58,7 +58,6 @@ exports.serialcommunication = () => {
         setTimeout(() => {
             console.log('getting gps location');
             port.write('AT+CIPGSMLOC=1,1\r'); //get gps loc
-            port.drain();
             port.write('AT+CIPGSMLOC=2,1\r'); //get time
         }, 15000);
     };
