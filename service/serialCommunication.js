@@ -10,7 +10,7 @@ const parserReadLine =  new Readline({ delimiter: '\r\n' });
 
 exports.serialcommunication = () => {
     // port.pipe(parserDelimeter);
-    port.pipe(parserReadLine); port.write('ATA\r');
+    port.pipe(parserReadLine);
 
     // port._write(Buffer.from('AT', 'ascii'));
     port.write("AT+CMGF=1");
