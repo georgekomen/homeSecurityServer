@@ -4,7 +4,7 @@ const default_settings =
         parity: 'none', stopBits: 1 };
 const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
-const parserReadLine =  new Readline({ delimiter: '\r\n' });
+const parserReadLine =  new Readline({ delimiter: '\r\n\r\n' });
 // const Delimiter = require('@serialport/parser-delimiter');
 // const parserDelimeter = new Delimiter({ delimiter: '\r\n' });
 
@@ -13,7 +13,7 @@ exports.serialcommunication = () => {
     port.pipe(parserReadLine);
 
     // port._write(Buffer.from('AT', 'ascii'));
-    port.write("AT+CMGF=1\r");
+    port.write("AT+CMGF=1");
     port.write('\r');
 
     parserReadLine.on('data', data => {
