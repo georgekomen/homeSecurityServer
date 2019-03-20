@@ -10,7 +10,7 @@ exports.senseVibration = () => {
         // Create a new `button` hardware instance.
         // This example allows the button module to
         // create a completely default instance
-        button = new five.Button(2);
+        button = new five.Button('GPIO6');
 
         // Inject the `button` hardware into
         // the Repl instance's context;
