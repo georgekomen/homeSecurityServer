@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
 const actuator = require('./routes/actuator');
 const app = express();
-const vibroSensor = require('./sensors/vibrationsensor');
+const vibrationsensor = require('./sensors/vibrationsensor');
 const serialCommunication = require('./service/serialCommunication');
 // const shellaccess = require('./service/shellaccess');
 const blinking = require('./actuators/blink');
@@ -44,8 +44,8 @@ app.use((err, req, res, next) => {
 });
 
 // scheduledjobs.schedulejob1();
-// vibroSensor.senseVibration();
+vibrationsensor.senseVibration();
 // serialCommunication.serialcommunication();
 // shellaccess.accessshell();
-blinking.blinkled();
+// blinking.blinkled();
 module.exports = app;
