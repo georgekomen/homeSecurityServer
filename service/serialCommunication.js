@@ -19,7 +19,7 @@ exports.serialcommunication = () => {
             console.log('Set Done');
         });
 
-        port.write("AT+CMGF=1\r\n");
+        port.write('AT\r\n');
     });
 
     parserReadLine.on('data', data => {
@@ -28,8 +28,8 @@ exports.serialcommunication = () => {
             console.log('receiving call');
             port.write('AT+DDET=1\r\n'); //enable dtmf
             port.write('ATA\r\n'); //receive call
-            port.write('AT+VTS=0\r\n');
         }
+        port.write('AT+VTS=1\r\n');
     });
 
     port.on('error', (err) => {
