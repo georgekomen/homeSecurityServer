@@ -4,14 +4,15 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-// const scheduledjobs = require('./service/scheduledjobs');
 const indexRouter = require('./routes/index');
 const actuator = require('./routes/actuator');
 const app = express();
-const vibrationsensor = require('./sensors/vibrationsensor');
-const serialCommunication = require('./service/serialCommunication');
+// const scheduledjobs = require('./service/scheduledjobs');
+// const vibrationsensor = require('./sensors/vibrationsensor');
+// const serialCommunication = require('./service/serialCommunication');
 // const shellaccess = require('./service/shellaccess');
-const blinking = require('./actuators/blink');
+// const blinking = require('./actuators/blink');
+const voicereader = require('./service/voicereader');
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup
@@ -44,8 +45,9 @@ app.use((err, req, res, next) => {
 });
 
 // scheduledjobs.schedulejob1();
-vibrationsensor.senseVibration();
+// vibrationsensor.senseVibration();
 // serialCommunication.serialcommunication();
 // shellaccess.accessshell();
 // blinking.blinkled();
+voicereader.readaudio();
 module.exports = app;
