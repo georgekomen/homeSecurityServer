@@ -1,7 +1,7 @@
 const fs = require('fs');
 const wav = require('wav');
 const Speaker = require('speaker');
-const file = fs.createReadStream('assets/audio/sample.wav');
+const file = fs.createReadStream('assets/audio/sample.wav');//Float32Array
 const reader = new wav.Reader();
 
 exports.readaudio = (serialport) => {
@@ -20,7 +20,8 @@ exports.readaudio = (serialport) => {
         serialport.write('AT+VSM=128,8000\r');//Compression Method: 8-bit linear / Sampling Rate: 8000MHz
         serialport.write('AT+VLS=1\r');//put modem into TAD mode
         serialport.write('AT+VTX\r');//put modem into TAD mode
-        serialport.write(Buffer.from(file));
+        // serialport.write(Buffer.from(file.buffer, 0, 16));
+        serialport.write(Buffer.from(file.buffer));
     };
 
     streamaudiofile(serialport);
