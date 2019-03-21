@@ -4,7 +4,7 @@ const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
 
-const voicereader = require('./service/voicereader');
+const voicereader = require('./voicereader');
 
 exports.serialcommunication = () => {
     port.pipe(parserReadLine);
