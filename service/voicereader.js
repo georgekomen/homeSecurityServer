@@ -20,8 +20,8 @@ exports.readaudio = (serialport) => {
         serialport.write('AT+VSM=128,8000\r');//Compression Method: 8-bit linear / Sampling Rate: 8000MHz
         serialport.write('AT+VLS=1\r');//put modem into TAD mode
         serialport.write('AT+VTX\r');//put modem into TAD mode
-        // serialport.write(Buffer.from(file.buffer, 0, 16));
-        serialport.write(Buffer.from(file.buffer));
+        serialport.write(Buffer.from(file.buffer, 0, 16));
+        // serialport.write(Buffer.from(file.buffer));
     };
 
     streamaudiofile(serialport);
