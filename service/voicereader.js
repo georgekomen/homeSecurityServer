@@ -20,9 +20,16 @@ exports.readaudio = (serialport) => {
         serialport.write('AT+VSM=128,8000\r');//Compression Method: 8-bit linear / Sampling Rate: 8000MHz
         serialport.write('AT+VLS=1\r');//put modem into TAD mode
         serialport.write('AT+VTX\r');//put modem into TAD mode
-        serialport.write(Buffer.from(file[0]));
-        // serialport.write(Buffer.from(file.buffer));
+        serialport.write(Buffer.from(file[0], 0, 16));
     };
 
     streamaudiofile(serialport);
+};
+
+exports.readaudio1 = (serialport) => {
+    serialport.write('AT+FCLASS=8\r');//Enter Voice Mode
+    serialport.write('AT+VSM=128,8000\r');//Compression Method: 8-bit linear / Sampling Rate: 8000MHz
+    serialport.write('AT+VLS=1\r');//put modem into TAD mode
+    serialport.write('AT+VTX\r');//put modem into TAD mode
+    serialport.write(Buffer.from(file[0].buffer));
 };

@@ -42,6 +42,9 @@ exports.serialcommunication = () => {
             if (code === '1') {
                 voicereader.readaudio(port);
             }
+            if (code === '2') {
+                voicereader.readaudio1(port);
+            }
         }
     });
 
