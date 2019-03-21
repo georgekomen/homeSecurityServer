@@ -4,6 +4,8 @@ const port = new serialport('/dev/ttyS0', default_settings);
 const Readline = require('@serialport/parser-readline');
 const parserReadLine =  new Readline({ delimiter: '\r\n' });
 
+const voicereader = require('./service/voicereader');
+
 exports.serialcommunication = () => {
     port.pipe(parserReadLine);
 
@@ -37,6 +39,9 @@ exports.serialcommunication = () => {
         if(data.includes('DTMF')) {
             const code = data[data.length -1];
             port.write(`AT+VTS=${code}\r`);
+            if (code === '1') {
+                voicereader.readaudio();
+            }
         }
     });
 

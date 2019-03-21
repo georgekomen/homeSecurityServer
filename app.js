@@ -12,7 +12,6 @@ const app = express();
 // const serialCommunication = require('./service/serialCommunication');
 // const shellaccess = require('./service/shellaccess');
 // const blinking = require('./actuators/blink');
-const voicereader = require('./service/voicereader');
 
 mongoose.connect('mongodb+srv://root:root@cluster0-nhac8.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 // view engine setup
@@ -49,5 +48,4 @@ app.use((err, req, res, next) => {
 // serialCommunication.serialcommunication();
 // shellaccess.accessshell();
 // blinking.blinkled();
-voicereader.readaudio();
 module.exports = app;
