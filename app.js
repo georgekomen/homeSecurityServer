@@ -9,7 +9,7 @@ const actuator = require('./routes/actuator');
 const app = express();
 // const scheduledjobs = require('./service/scheduledjobs');
 // const vibrationsensor = require('./sensors/vibrationsensor');
-// const serialCommunication = require('./service/serialCommunication');
+const serialCommunication = require('./service/serialCommunication');
 // const shellaccess = require('./service/shellaccess');
 // const blinking = require('./actuators/blink');
 
@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 
 // scheduledjobs.schedulejob1();
 // vibrationsensor.senseVibration();
-// serialCommunication.serialcommunication();
+serialCommunication.serialcommunication();
 // shellaccess.accessshell();
 // blinking.blinkled();
 module.exports = app;
