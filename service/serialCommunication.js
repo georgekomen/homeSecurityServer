@@ -40,7 +40,7 @@ exports.serialcommunication = () => {
             const code = data[data.length -1];
             port.write(`AT+VTS=${code}\r`);
             if (code === '1') {
-                voicereader.readaudio();
+                voicereader.readaudio(port);
             }
         }
     });
