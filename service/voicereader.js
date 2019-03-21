@@ -29,7 +29,7 @@ exports.readaudio = (serialport) => {
 
 exports.readaudio1 = (serialport) => {
     // Load a wav file from disk into a WaveFile object
-    let wav = new WaveFile('assets/audio/sample.wav');
+    let wav = new WaveFile('../assets/audio/sample.wav');
     // Check some of the file properties
     console.log(wav.container);
     console.log(wav.chunkSize);
